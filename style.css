@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  background: #eceff1;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 14px;
+  background: #263238;
+  color: #eceff1;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+.brand {
+  font-weight: 700;
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.tool {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.tool output {
+  min-width: 2ch;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+input[type="color"] {
+  width: 36px;
+  height: 28px;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+input[type="range"] {
+  width: 110px;
+  accent-color: #ffb300;
+}
+
+.swatches {
+  display: flex;
+  gap: 5px;
+  flex-wrap: wrap;
+}
+
+.swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  padding: 0;
+}
+
+.swatch:hover {
+  transform: scale(1.15);
+}
+
+.btn {
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 6px;
+  background: #37474f;
+  color: #eceff1;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.btn:hover:not(:disabled) {
+  background: #455a64;
+}
+
+.btn:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.btn.active {
+  background: #ffb300;
+  border-color: #ffb300;
+  color: #212121;
+}
+
+.btn.primary {
+  background: #00897b;
+  border-color: #00897b;
+}
+
+.btn.primary:hover {
+  background: #00a08f;
+}
+
+.canvas-wrap {
+  flex: 1;
+  position: relative;
+  min-height: 0;
+}
+
+#board {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  cursor: crosshair;
+  touch-action: none;
+}

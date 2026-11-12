@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paint App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="toolbar">
+    <span class="brand">🎨 Paint</span>
+    <label class="tool">
+      <span>Color</span>
+      <input type="color" id="color" value="#1a1a2e">
+    </label>
+    <div class="swatches" id="swatches"></div>
+    <label class="tool">
+      <span>Size <output id="sizeValue">6</output></span>
+      <input type="range" id="size" min="1" max="80" value="6">
+    </label>
+    <button id="eraser" class="btn" type="button">🧽 Eraser</button>
+    <button id="undo" class="btn" type="button" disabled>↩️ Undo</button>
+    <button id="clear" class="btn" type="button">🗑️ Clear</button>
+    <button id="save" class="btn primary" type="button">💾 Save PNG</button>
+  </header>
+  <main class="canvas-wrap">
+    <canvas id="board"></canvas>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
